@@ -2,7 +2,7 @@ package DBIx::XHTML_Table;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '1.36';
+$VERSION = '1.37';
 
 use DBI;
 use Carp;
@@ -724,7 +724,7 @@ __END__
 
 =head1 NAME
 
-DBIx::XHTML_Table - SQL query result set to XML-based HTML table.
+DBIx::XHTML_Table - SQL query result set to HTML table.
 
 =head1 SYNOPSIS
 
@@ -1442,6 +1442,14 @@ Like add_cols, drop_cols goes against said 'philosophy', but it is here for
 the sake of TIMTWOTDI. Simply pass it an array ref that contains either the
 name or positions of the columns you want to drop.
 
+=item B<new>
+
+Things with the stuff.
+
+=item B<reset>
+
+Stuff with the things.
+
 =back
 
 =head1 TAG REFERENCE
@@ -1522,11 +1530,11 @@ DBI
 
 =head1 AUTHOR 
 
-Jeffrey Hayes Anderson
+Jeff Anderson
 
 =head1 COPYRIGHT
 
-Copyright (c) 2004 Jeffrey Hayes Anderson.
+Copyright (c) 2004 Jeff Anderson.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
