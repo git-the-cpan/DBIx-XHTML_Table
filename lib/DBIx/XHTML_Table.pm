@@ -2,7 +2,7 @@ package DBIx::XHTML_Table;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '1.37';
+$VERSION = '1.38';
 
 use DBI;
 use Carp;
@@ -113,7 +113,7 @@ sub modify {
 
 	# apply attributes to specified columns
 	if (ref $attribs eq 'HASH') {
-		$cols ||= 'global';
+		$cols = 'global' unless defined( $cols) && length( $cols );
 		$cols = $self->_refinate($cols);
 
 		while (my($attr,$val) = each %$attribs) {
@@ -448,6 +448,9 @@ sub _build_head_row {
 			$field = ucfirst $field unless $self->{'no_ucfirst'};
 		}
 
+        # bug 21761 "Special XML characters should be expressed as entities"
+        $field = $self->_xml_encode( $field );
+
 		$output .= $T.$T . _tag_it('th', $attribs, $field) . $N;
 	}
 
@@ -522,12 +525,12 @@ sub _build_body_row {
 		# suppress warnings AND keep 0 from becoming &nbsp;
 		$row->[$_] = '' unless defined($row->[$_]);
 
-		# escape ampersands ... should i escape more?
-		$row->[$_] =~ s/&/&amp;/g;
+		# bug 21761 "Special XML characters should be expressed as entities"
+		$row->[$_] = $self->_xml_encode( $row->[$_] );
 
-		my $cdata = ($row->[$_] =~ /^.+$/) 
-			? $row->[$_] 
-			: $self->{'null_value'}
+		my $cdata = ($row->[$_] =~ /^\s+$/) 
+			? $self->{'null_value'}
+			: $row->[$_] 
 		;
 
 		$self->{'current_col'} = $name;
@@ -651,7 +654,7 @@ sub _total_chunk {
 		}	
 	}
 
-	return [ map { defined $totals{$_} ? $totals{$_} : undef } sort (0..$self->get_col_count() - 1) ];
+	return [ map { defined $totals{$_} ? $totals{$_} : undef } (0 .. $self->get_col_count() - 1) ];
 }
 
 # uses %ESCAPES to convert the '4 Horsemen' of XML
@@ -706,6 +709,7 @@ sub _reset_fields_hash {
 # assigns a non-DBI supplied data table (2D array ref)
 sub _do_black_magic {
 	my ($self,$ref,$headers) = @_;
+    croak "bad data" unless ref( $ref->[0] ) eq 'ARRAY';
 	$self->{'fields_arry'} = $headers ? [@$headers] : [ map { lc } @{ shift @$ref } ];
 	$self->{'fields_hash'} = $self->_reset_fields_hash();
 	$self->{'rows'}        = $ref;
@@ -1534,7 +1538,7 @@ Jeff Anderson
 
 =head1 COPYRIGHT
 
-Copyright (c) 2004 Jeff Anderson.
+Copyright (c) 2015 Jeff Anderson.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
