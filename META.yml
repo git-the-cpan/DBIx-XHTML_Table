@@ -3,6 +3,7 @@ abstract: 'SQL query result set to HTML table.'
 author:
   - 'jeffa <info+cpan@unlocalhost.com>'
 build_requires:
+  DBI: 0
   Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 0
@@ -19,4 +20,4 @@ no_index:
     - inc
 requires:
   perl: 5.006
-version: 1.38
+version: 1.39
