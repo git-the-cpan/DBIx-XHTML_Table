@@ -1,5 +1,8 @@
 Revision history for Perl extension DBIx::XHTML_Table.
 
+1.41
+    - fixed MANIFEST
+
 1.40
     - restructed tests
     - corrected external sites in docs
