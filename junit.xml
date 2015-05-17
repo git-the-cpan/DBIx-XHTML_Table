@@ -1,0 +1,239 @@
+<testsuites>
+  <testsuite failures="0"
+             errors="0"
+             time="0.0318489074707031"
+             tests="2"
+             name="00-install_t">
+    <testcase time="0.000352859497070312" name="(init)" />
+    <testcase time="0.030501127243042"
+              name="1 - use DBIx::XHTML_Table;"></testcase>
+    <testcase time="0.000500917434692383"
+              name="2 - correct version (1.40)"></testcase>
+    <testcase time="0.000494003295898438" name="(teardown)" />
+    <system-out><![CDATA[1..2
+ok 1 - use DBIx::XHTML_Table;
+ok 2 - correct version (1.40)
+]]></system-out>
+    <system-err></system-err>
+  </testsuite>
+  <testsuite failures="0"
+             errors="0"
+             time="0.0288360118865967"
+             tests="1"
+             name="author_pod_t">
+    <testcase time="0.000262975692749023" name="(init)" />
+    <testcase time="0.0274388790130615"
+              name="1 - POD test for blib/lib/DBIx/XHTML_Table.pm"></testcase>
+    <testcase time="0.00113415718078613" name="(teardown)" />
+    <system-out><![CDATA[1..1
+ok 1 - POD test for blib/lib/DBIx/XHTML_Table.pm
+]]></system-out>
+    <system-err></system-err>
+  </testsuite>
+  <testsuite failures="0"
+             errors="0"
+             time="0.0402710437774658"
+             tests="1"
+             name="author_pod-coverage_t">
+    <testcase time="0.000138998031616211" name="(init)" />
+    <testcase time="0.0394148826599121"
+              name="1 - Pod coverage on DBIx::XHTML_Table"></testcase>
+    <testcase time="0.0007171630859375" name="(teardown)" />
+    <system-out><![CDATA[1..1
+ok 1 - Pod coverage on DBIx::XHTML_Table
+]]></system-out>
+    <system-err></system-err>
+  </testsuite>
+  <testsuite failures="0"
+             errors="0"
+             time="0.00110483169555664"
+             tests="2"
+             name="bug-fixes_bug-11666_t">
+    <testcase time="0.000260829925537109" name="(init)" />
+    <testcase time="0.000308036804199219"
+              name="1 - The object isa DBIx::XHTML_Table"></testcase>
+    <testcase time="0.000255107879638672"
+              name="2 - cell with only newline"></testcase>
+    <testcase time="0.000280857086181641" name="(teardown)" />
+    <system-out><![CDATA[1..2
+ok 1 - The object isa DBIx::XHTML_Table
+ok 2 - cell with only newline
+]]></system-out>
+    <system-err></system-err>
+  </testsuite>
+  <testsuite failures="0"
+             errors="0"
+             time="0.00345611572265625"
+             tests="6"
+             name="bug-fixes_bug-11681_t">
+    <testcase time="0.000448226928710938" name="(init)" />
+    <testcase time="0.00067591667175293"
+              name="1 - The object isa DBIx::XHTML_Table"></testcase>
+    <testcase time="0.000330924987792969"
+              name="2 - rows with headers of 0 and 1"></testcase>
+    <testcase time="0.000345945358276367"
+              name="3 - modify() works on 1"></testcase>
+    <testcase time="0.000234127044677734"
+              name="4 - The object isa DBIx::XHTML_Table"></testcase>
+    <testcase time="0.000257968902587891" name="5 - reset table"></testcase>
+    <testcase time="0.000335931777954102"
+              name="6 - modify() works on 0"></testcase>
+    <testcase time="0.00082707405090332" name="(teardown)" />
+    <system-out><![CDATA[1..6
+ok 1 - The object isa DBIx::XHTML_Table
+ok 2 - rows with headers of 0 and 1
+ok 3 - modify() works on 1
+ok 4 - The object isa DBIx::XHTML_Table
+ok 5 - reset table
+ok 6 - modify() works on 0
+]]></system-out>
+    <system-err></system-err>
+  </testsuite>
+  <testsuite failures="0"
+             errors="0"
+             time="0.00266599655151367"
+             tests="3"
+             name="bug-fixes_bug-21761_t">
+    <testcase time="0.000257015228271484" name="(init)" />
+    <testcase time="0.0010831356048584"
+              name="1 - The object isa DBIx::XHTML_Table"></testcase>
+    <testcase time="0.000284910202026367"
+              name="2 - escape XML entities"></testcase>
+    <testcase time="0.000278949737548828"
+              name="3 - headers retain orig values"></testcase>
+    <testcase time="0.000761985778808594" name="(teardown)" />
+    <system-out><![CDATA[1..3
+ok 1 - The object isa DBIx::XHTML_Table
+ok 2 - escape XML entities
+ok 3 - headers retain orig values
+]]></system-out>
+    <system-err></system-err>
+  </testsuite>
+  <testsuite failures="0"
+             errors="0"
+             time="0.00200986862182617"
+             tests="6"
+             name="unit_01-run_t">
+    <testcase time="0.000258922576904297" name="(init)" />
+    <testcase time="0.000319957733154297"
+              name="1 - The object isa DBIx::XHTML_Table"></testcase>
+    <testcase time="0.000236034393310547" name="2 - vanilla output"></testcase>
+    <testcase time="0.000232934951782227" name="3 - alter heading"></testcase>
+    <testcase time="0.000240087509155273" name="4 - group by heading"></testcase>
+    <testcase time="0.000200986862182617" name="5 - calc totals"></testcase>
+    <testcase time="0.000236988067626953" name="6 - color cells"></testcase>
+    <testcase time="0.000283956527709961" name="(teardown)" />
+    <system-out><![CDATA[1..6
+ok 1 - The object isa DBIx::XHTML_Table
+ok 2 - vanilla output
+ok 3 - alter heading
+ok 4 - group by heading
+ok 5 - calc totals
+ok 6 - color cells
+]]></system-out>
+    <system-err></system-err>
+  </testsuite>
+  <testsuite failures="0"
+             errors="0"
+             time="0.00852704048156738"
+             tests="2"
+             name="unit_02-dbd-csv_t">
+    <testcase time="0.000242948532104492" name="(init)" />
+    <testcase time="0.000878095626831055"
+              name="1 - The object isa DBIx::XHTML_Table"></testcase>
+    <testcase time="0.00492000579833984"
+              name="2 - correct output from CSV file"></testcase>
+    <testcase time="0.00248599052429199" name="(teardown)" />
+    <system-out><![CDATA[1..2
+ok 1 - The object isa DBIx::XHTML_Table
+ok 2 - correct output from CSV file
+]]></system-out>
+    <system-err></system-err>
+  </testsuite>
+  <testsuite failures="0"
+             errors="0"
+             time="0.1055588722229"
+             tests="25"
+             name="unit_03-cookbook_t">
+    <testcase time="0.00014185905456543" name="(init)" />
+    <testcase time="0.00542998313903809"
+              name="1 - this is version 1.40"></testcase>
+    <testcase time="0.00407314300537109"
+              name="2 - no-modifications (generated from 1.36)"></testcase>
+    <testcase time="0.00408387184143066"
+              name="3 - sorted-attributes (generated from 1.36)"></testcase>
+    <testcase time="0.00383496284484863"
+              name="4 - table-border (generated from 1.36)"></testcase>
+    <testcase time="0.00390911102294922"
+              name="5 - table-inline-css (generated from 1.36)"></testcase>
+    <testcase time="0.00407195091247559"
+              name="6 - table-and-cell-inline-css (generated from 1.36)"></testcase>
+    <testcase time="0.00388813018798828"
+              name="7 - align-th-right (generated from 1.36)"></testcase>
+    <testcase time="0.00391077995300293"
+              name="8 - add-caption (generated from 1.36)"></testcase>
+    <testcase time="0.00382018089294434"
+              name="9 - add-caption-css (generated from 1.36)"></testcase>
+    <testcase time="0.00389885902404785"
+              name="10 - add-caption-border (generated from 1.36)"></testcase>
+    <testcase time="0.00381112098693848"
+              name="11 - put-caption-at-bottom (generated from 1.36)"></testcase>
+    <testcase time="0.00382399559020996"
+              name="12 - no-header (generated from 1.36)"></testcase>
+    <testcase time="0.00393891334533691"
+              name="13 - color-one-column (generated from 1.36)"></testcase>
+    <testcase time="0.00402498245239258"
+              name="14 - color-many-columns (generated from 1.36)"></testcase>
+    <testcase time="0.00401997566223145"
+              name="15 - color-alternating-columns (generated from 1.36)"></testcase>
+    <testcase time="0.00392818450927734"
+              name="16 - add-column (generated from 1.36)"></testcase>
+    <testcase time="0.0039219856262207"
+              name="17 - seperate-groups (generated from 1.36)"></testcase>
+    <testcase time="0.00404787063598633"
+              name="18 - calc-totals (generated from 1.36)"></testcase>
+    <testcase time="0.00412607192993164"
+              name="19 - calc-subtotals (generated from 1.36)"></testcase>
+    <testcase time="0.00398588180541992"
+              name="20 - arbitrary-foot-data (generated from 1.36)"></testcase>
+    <testcase time="0.00411510467529297"
+              name="21 - copy-headers-to-foot (generated from 1.36)"></testcase>
+    <testcase time="0.00418806076049805"
+              name="22 - set-col-colors (generated from 1.36)"></testcase>
+    <testcase time="0.0041508674621582"
+              name="23 - modify-three-colors (generated from 1.36)"></testcase>
+    <testcase time="0.00405597686767578"
+              name="24 - modify-four-colors (generated from 1.36)"></testcase>
+    <testcase time="0.00396609306335449"
+              name="25 - modify-five-colors (generated from 1.36)"></testcase>
+    <testcase time="0.00439095497131348" name="(teardown)" />
+    <system-out><![CDATA[1..25
+ok 1 - this is version 1.40
+ok 2 - no-modifications (generated from 1.36)
+ok 3 - sorted-attributes (generated from 1.36)
+ok 4 - table-border (generated from 1.36)
+ok 5 - table-inline-css (generated from 1.36)
+ok 6 - table-and-cell-inline-css (generated from 1.36)
+ok 7 - align-th-right (generated from 1.36)
+ok 8 - add-caption (generated from 1.36)
+ok 9 - add-caption-css (generated from 1.36)
+ok 10 - add-caption-border (generated from 1.36)
+ok 11 - put-caption-at-bottom (generated from 1.36)
+ok 12 - no-header (generated from 1.36)
+ok 13 - color-one-column (generated from 1.36)
+ok 14 - color-many-columns (generated from 1.36)
+ok 15 - color-alternating-columns (generated from 1.36)
+ok 16 - add-column (generated from 1.36)
+ok 17 - seperate-groups (generated from 1.36)
+ok 18 - calc-totals (generated from 1.36)
+ok 19 - calc-subtotals (generated from 1.36)
+ok 20 - arbitrary-foot-data (generated from 1.36)
+ok 21 - copy-headers-to-foot (generated from 1.36)
+ok 22 - set-col-colors (generated from 1.36)
+ok 23 - modify-three-colors (generated from 1.36)
+ok 24 - modify-four-colors (generated from 1.36)
+ok 25 - modify-five-colors (generated from 1.36)
+]]></system-out>
+    <system-err></system-err>
+  </testsuite>
+</testsuites>

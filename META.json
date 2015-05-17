@@ -1,5 +1,5 @@
 {
-   "abstract" : "SQL query result set to HTML table.",
+   "abstract" : "SQL query result set to XHTML table.",
    "author" : [
       "jeffa <info+cpan@unlocalhost.com>"
    ],
@@ -38,5 +38,5 @@
       }
    },
    "release_status" : "stable",
-   "version" : "1.39"
+   "version" : "1.40"
 }
