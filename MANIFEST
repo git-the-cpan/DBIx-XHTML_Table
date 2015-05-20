@@ -9,6 +9,7 @@ t/02-exec-query.t
 t/03-cookbook.t
 t/04-mixed-case-col-keys-array.t
 t/05-mixed-case-col-keys-dbd.t
+t/06-html-encode.t
 t/data/cookbook.csv
 t/data/expected/001-no-modifications.html
 t/data/expected/002-sorted-attributes.html
