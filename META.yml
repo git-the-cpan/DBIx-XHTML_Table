@@ -1,9 +1,8 @@
 ---
 abstract: 'SQL query result set to XHTML table.'
 author:
-  - 'jeffa <info+cpan@unlocalhost.com>'
+  - 'jeffa <jeffa@cpan.org>'
 build_requires:
-  DBI: 0
   Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 0
@@ -19,5 +18,10 @@ no_index:
     - t
     - inc
 requires:
+  DBI: 0
   perl: 5.006
-version: 1.45
+resources:
+  bugtracker: https://github.com/jeffa/DBIx-XHTML_Table/issues
+  homepage: https://github.com/jeffa/DBIx-XHTML_Table
+  repository: https://github.com/jeffa/DBIx-XHTML_Table.git
+version: 1.46
