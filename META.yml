@@ -21,7 +21,6 @@ requires:
   DBI: 0
   perl: 5.006
 resources:
-  bugtracker: https://github.com/jeffa/DBIx-XHTML_Table/issues
   homepage: https://github.com/jeffa/DBIx-XHTML_Table
   repository: https://github.com/jeffa/DBIx-XHTML_Table.git
-version: 1.46
+version: 1.47

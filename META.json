@@ -39,13 +39,10 @@
    },
    "release_status" : "stable",
    "resources" : {
-      "bugtracker" : {
-         "web" : "https://github.com/jeffa/DBIx-XHTML_Table/issues"
-      },
       "homepage" : "https://github.com/jeffa/DBIx-XHTML_Table",
       "repository" : {
          "url" : "https://github.com/jeffa/DBIx-XHTML_Table.git"
       }
    },
-   "version" : "1.46"
+   "version" : "1.47"
 }

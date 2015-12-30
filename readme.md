@@ -1,16 +1,6 @@
 DBIx::XHTML_Table 
 =================
-Create HTML tables from SQL queries.
-
-Installation
-------------
-[Classic CPAN installation](http://perldoc.perl.org/ExtUtils/MakeMaker.html#Default-Makefile-Behaviour):
-```
-perl Makefile.PL
-make
-make test
-make install
-```
+Create HTML tables from SQL queries. [![CPAN Version](https://badge.fury.io/pl/DBIx-XHTML_Table.svg)](https://metacpan.org/pod/DBIx::XHTML_Table) [![Build Status](https://api.travis-ci.org/jeffa/DBIx-XHTML_Table.svg?branch=master)](https://travis-ci.org/jeffa/DBIx-XHTML_Table)
 
 Synopsis
 --------
@@ -36,8 +26,23 @@ print DBIx::XHTML_Table
     ->output;
 ```
 
-Documentation
--------------
+Installation
+------------
+To install this module, you should use CPAN. A good starting
+place is [How to install CPAN modules](http://www.cpan.org/modules/INSTALL.html).
+
+If you truly want to install from this github repo, then
+be sure and create the manifest before you test and install:
+```
+perl Makefile.PL
+make
+make manifest
+make test
+make install
+```
+
+Support and Documentation
+-------------------------
 * perldoc [DBIx::XHTML_Table](/lib/DBIx/XHTML_Table.pm)
 * [Tutorial](http://www.unlocalhost.com/XHTML_Table/tutorial.html)
 * [Cookbook](http://www.unlocalhost.com/XHTML_Table/cookbook.html)

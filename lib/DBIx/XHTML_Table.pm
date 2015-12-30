@@ -2,7 +2,7 @@ package DBIx::XHTML_Table;
 
 use strict;
 use warnings;
-our $VERSION = '1.46';
+our $VERSION = '1.47';
 
 use DBI;
 use Carp;
@@ -1638,7 +1638,7 @@ Jeff Anderson
 
 =head1 COPYRIGHT
 
-Copyright (c) 2015 Jeff Anderson.
+Copyright 2016 Jeff Anderson.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
