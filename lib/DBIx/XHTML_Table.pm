@@ -2,7 +2,7 @@ package DBIx::XHTML_Table;
 
 use strict;
 use warnings;
-our $VERSION = '1.47';
+our $VERSION = '1.48';
 
 use DBI;
 use Carp;
@@ -837,27 +837,52 @@ DBIx::XHTML_Table - SQL query result set to XHTML table.
 
 =head1 DESCRIPTION
 
-B<DBIx::XHTML_Table> is a DBI extension that creates an XHTML
+B<DBIx::XHTML_Table> is a DBI extension that creates an HTML
 table from a database query result set. It was created to fill
-the gap between fetching rows from a database and transforming
-them into a web browser renderable table. DBIx::XHTML_Table is
+the gap between fetching data from a database and transforming
+that data into a web browser renderable table. DBIx::XHTML_Table is
 intended for programmers who want the responsibility of presenting
 (decorating) data, easily. This module is meant to be used in situations
 where the concern for presentation and logic seperation is overkill.
 Providing logic or editable data is beyond the scope of this module,
 but it is capable of doing such.
 
-DBIx::XHTML_Table is over one decade old now and has been in
-need of a rewrite for a long time. Two new modules are being
-developed to handle the most of the current responsibilites. This
-module will not be retired, but usage of the following is encouraged
-once they have both matured to version 1.0 and greater:
+=head1 CODE FREEZE
+
+For the most part, no new functionality will be added to this module.
+Only bug fixes and documentation corrections/additions. All new efforts
+will be directed towards the rewrite of this distribution, B<DBIx::HTML>.
+
+This distribution features a more flexible interface with fewer methods and
+logically named argument parameters. At the core is an HTML attribute generator:
+
+=over 4
+
+=item * L<Tie::Hash::Attribute>
+
+=back
+
+Which is used by an HTML tag generator:
+
+=over 4
+
+=item * L<HTML::AutoTag>
+
+=back
+
+Which is used by an HTML table generator:
+
+=over 4
+
+=item * L<Spreadsheet::HTML>
+
+=back
+
+Which is finally wrapped by a DBI extension:
 
 =over 4
 
 =item * L<DBIx::HTML>
-
-=item * L<Spreadsheet::HTML>
 
 =back
 
@@ -1640,10 +1665,40 @@ Jeff Anderson
 
 Copyright 2016 Jeff Anderson.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+This program is free software; you can redistribute it and/or modify it
+under the terms of the the Artistic License (2.0). You may obtain a
+copy of the full license at:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+L<http://www.perlfoundation.org/artistic_license_2_0>
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Any use, modification, and distribution of the Standard or Modified
+Versions is governed by this Artistic License. By using, modifying or
+distributing the Package, you accept this license. Do not use, modify,
+or distribute the Package, if you do not accept this license.
+
+If your Modified Version has been derived from a Modified Version made
+by someone other than you, you are nevertheless required to ensure that
+your Modified Version complies with the requirements of this license.
+
+This license does not grant you the right to use any trademark, service
+mark, tradename, or logo of the Copyright Holder.
+
+This license includes the non-exclusive, worldwide, free-of-charge
+patent license to make, have made, use, offer to sell, sell, import and
+otherwise transfer the Package with respect to any patent claims
+licensable by the Copyright Holder that are necessarily infringed by the
+Package. If you institute patent litigation (including a cross-claim or
+counterclaim) against any party alleging that the Package constitutes
+direct or contributory patent infringement, then this Artistic License
+to you shall terminate on the date that such litigation is filed.
+
+Disclaimer of Warranty: THE PACKAGE IS PROVIDED BY THE COPYRIGHT HOLDER
+AND CONTRIBUTORS "AS IS' AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES.
+THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, OR NON-INFRINGEMENT ARE DISCLAIMED TO THE EXTENT PERMITTED BY
+YOUR LOCAL LAW. UNLESS REQUIRED BY LAW, NO COPYRIGHT HOLDER OR
+CONTRIBUTOR WILL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, OR
+CONSEQUENTIAL DAMAGES ARISING IN ANY WAY OUT OF THE USE OF THE PACKAGE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 =cut
